@@ -9,6 +9,7 @@ public class TestBase {
 
     protected RegistrationPage registrationPage = new RegistrationPage();
     TextBoxPage textBoxPage = new TextBoxPage();
+    TestData testData = new TestData();
 
     @BeforeAll
     static void beforeAll() {
