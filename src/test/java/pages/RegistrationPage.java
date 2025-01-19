@@ -34,8 +34,7 @@ public class RegistrationPage {
     public RegistrationPage openPage() {
         open("/automation-practice-form");
         $(".text-center").shouldHave(text(TITLE_TEXT));
-        executeJavaScript("$('#fixedban').remove()");
-        executeJavaScript("$('footer').remove()");
+
         return this;
     }
 
@@ -64,9 +63,9 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage setBirthDate(String month, String day, String year) {
+    public RegistrationPage setBirthDate(String day, String month, String year) {
         dateOfBirthInput.click();
-        calendarComponent.setDate(month, day, year);
+        calendarComponent.setDate(day, month, year);
         return this;
     }
 
@@ -91,7 +90,7 @@ public class RegistrationPage {
     }
 
     public RegistrationPage setState(String value) {
-        stateInput.click();
+        stateInput.scrollIntoView(true).click();
         selectStateInput.$(byText(value)).click();
         return this;
     }
