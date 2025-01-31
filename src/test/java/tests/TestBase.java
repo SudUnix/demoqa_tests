@@ -2,12 +2,14 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
+import pages.AlertsPage;
 import pages.RegistrationPage;
-import pages.components.TextBoxPage;
+import pages.TextBoxPage;
 
 public class TestBase {
 
     protected RegistrationPage registrationPage = new RegistrationPage();
+    protected AlertsPage alertsPage = new AlertsPage();
     TextBoxPage textBoxPage = new TextBoxPage();
     TestData testData = new TestData();
 
